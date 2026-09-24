@@ -1,0 +1,234 @@
+{
+  "info": {
+    "_postman_id": "279c2dbb-2997-4127-b9a8-1e0322a804ab",
+    "name": "insuredmine",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14518452",
+    "_collection_link": "https://go.postman.co/collection/14518452-279c2dbb-2997-4127-b9a8-1e0322a804ab?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": [
+                "/D:/GitHub/insuredmine-assessment/sample/data-sheet - Node js Assesment (2) (1) (1).csv"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "search by name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/policies/search?username=Lura",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "policies",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "username",
+              "value": "Lura"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "aggregate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/policies/aggregate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "policies",
+            "aggregate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cpu",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/system/cpu",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "system",
+            "cpu"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "stress",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/system/stress?seconds=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "system",
+            "stress"
+          ],
+          "query": [
+            {
+              "key": "seconds",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "schedule",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"message\": \"Hello InsuredMine\",\r\n    \"day\": \"2026-09-24\",\r\n    \"time\": \"13:45\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/messages/schedule",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "messages",
+            "schedule"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "scheduled",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/messages/scheduled",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "messages",
+            "scheduled"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "messages",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/messages",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

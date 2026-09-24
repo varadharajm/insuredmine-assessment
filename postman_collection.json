@@ -1,0 +1,50 @@
+{
+  "info": {
+    "name": "InsuredMine Node.js Assessment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:3000" }],
+  "item": [
+    {
+      "name": "Task 1.1 - Upload CSV/XLSX",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/upload",
+        "body": { "mode": "formdata", "formdata": [{ "key": "file", "type": "file", "src": "" }] }
+      }
+    },
+    {
+      "name": "Task 1.2 - Search policies by username",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/policies/search?username=Lura" }
+    },
+    {
+      "name": "Task 1.3 - Aggregated policies per user",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/policies/aggregate" }
+    },
+    {
+      "name": "Task 2.1 - Current CPU usage",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/system/cpu" }
+    },
+    {
+      "name": "Task 2.1 - Stress CPU (demo auto-restart)",
+      "request": { "method": "POST", "url": "{{baseUrl}}/api/system/stress?seconds=10" }
+    },
+    {
+      "name": "Task 2.2 - Schedule a message",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/messages/schedule",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"message\": \"Hello InsuredMine\",\n  \"day\": \"2026-09-24\",\n  \"time\": \"18:30\"\n}" }
+      }
+    },
+    {
+      "name": "Task 2.2 - List scheduled jobs",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/messages/scheduled" }
+    },
+    {
+      "name": "Task 2.2 - List inserted messages",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/messages" }
+    }
+  ]
+}
